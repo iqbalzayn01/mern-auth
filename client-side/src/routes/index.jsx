@@ -7,9 +7,7 @@ import {
 import SignIn from '../pages/signIn';
 import SignUp from '../pages/signUp';
 import RequireAuth from './requireAuth';
-
-// ADMIN
-import Home from '../pages/home';
+import UserProfile from '../pages/userProfile';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +15,7 @@ const router = createBrowserRouter(
       <Route path="/*" element={<SignIn />} />
       <Route path="/signup/*" element={<SignUp />} />
       <Route element={<RequireAuth />}>
-        <Route path="/home/*" element={<Home />} />
+        <Route path="/user-profile/*" element={<UserProfile />} />
       </Route>
     </>
   )

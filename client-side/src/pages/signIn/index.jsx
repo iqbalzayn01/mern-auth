@@ -41,7 +41,7 @@ export default function SignIn() {
       await dispatch(signIn(formData));
       setIsLoading(false);
       dispatch(hideLoading());
-      navigate('/home');
+      navigate('/user-profile');
     } catch (error) {
       console.error('Error login:', error);
       setError('email atau password salah!');
