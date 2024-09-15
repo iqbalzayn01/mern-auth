@@ -28,4 +28,11 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    .bg-signup-img {
+        background-image: url('/content/signin-img.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }

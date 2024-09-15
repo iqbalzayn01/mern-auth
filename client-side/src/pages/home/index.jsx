@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { PiClock, PiCalendarDots } from 'react-icons/pi';
 import { useNavigate } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 import moment from 'moment';
 import 'moment-timezone';
@@ -84,15 +85,17 @@ const Home = () => {
           </div>
         </div>
       </main>
-      {isPopUpOpen && (
-        <PopUp
-          handle={handleLogout}
-          onClose={() => setIsPopUpOpen(false)}
-          textPopUp="Apakah anda yakin ingin keluar?"
-          classNameBtn="bg-red-500"
-          textBtn="Log out"
-        />
-      )}
+      <AnimatePresence>
+        {isPopUpOpen && (
+          <PopUp
+            handle={handleLogout}
+            onClose={() => setIsPopUpOpen(false)}
+            textPopUp="Are you sure want to logout?"
+            classNameBtn="bg-red-500"
+            textBtn="Log out"
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

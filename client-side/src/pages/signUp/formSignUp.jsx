@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import CButton from '../../components/CButton';
 import CInputLabel from '../../components/CInputLabel';
@@ -17,11 +18,11 @@ export default function FormSignUp({
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-full flex-col items-center justify-center gap-5"
+      className="flex flex-col items-center justify-center gap-2"
     >
       <CInputLabel
         htmlFor="name"
-        label="Nama"
+        label="Name"
         name="name"
         type="text"
         value={valueName}
@@ -30,28 +31,30 @@ export default function FormSignUp({
         placeholder="Name"
         onChange={onChange}
       />
-      <CInputLabel
-        htmlFor="email-address"
-        label="Email"
-        name="email"
-        type="email"
-        value={valueEmail}
-        className="w-full text-input mt-3"
-        classNameLabel="font-medium text-secondarycolor"
-        placeholder="Email"
-        onChange={onChange}
-      />
-      <CInputLabel
-        htmlFor="no-telp"
-        label="Nomor Telepon"
-        name="no_telp"
-        type="text"
-        value={valueNoTelp}
-        className="w-full text-input mt-3"
-        classNameLabel="font-medium text-secondarycolor"
-        placeholder="Nomor Telepon"
-        onChange={onChange}
-      />
+      <div className="flex flex-col md:flex-row w-full items-center justify-between gap-2">
+        <CInputLabel
+          htmlFor="email-address"
+          label="Email"
+          name="email"
+          type="email"
+          value={valueEmail}
+          className="w-full text-input mt-3"
+          classNameLabel="font-medium text-secondarycolor"
+          placeholder="Email"
+          onChange={onChange}
+        />
+        <CInputLabel
+          htmlFor="no-telp"
+          label="Phone Number"
+          name="no_telp"
+          type="text"
+          value={valueNoTelp}
+          className="w-full text-input mt-3"
+          classNameLabel="font-medium text-secondarycolor"
+          placeholder="Phone Number"
+          onChange={onChange}
+        />
+      </div>
       <CInputLabel
         htmlFor="password"
         label="Password"
@@ -65,32 +68,31 @@ export default function FormSignUp({
       />
       <CInputLabel
         htmlFor="confirmPassword"
-        label="Konfirmasi Password"
+        label="Confirm Password"
         name="confirmPassword"
         type="password"
         value={valueConfirmPassword}
-        className="w-full text-input mt-3"
+        className="w-full text-input mt-3 mb-2"
         classNameLabel="font-medium text-secondarycolor"
-        placeholder="Konfirmasi Password"
+        placeholder="Confirm Password"
         onChange={onChange}
       />
-      <CButton
-        type="submit"
-        className="bg-zinc-800 hover:bg-black px-5 py-2 text-center text-white rounded-lg"
-        loading={isLoading}
-        disabled={isLoading}
-      >
-        Daftar Akun Baru
-      </CButton>
+      <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.8 }}>
+        <CButton
+          type="submit"
+          className="bg-zinc-800 hover:bg-black px-5 py-2 text-center text-white mb-2 rounded-lg"
+          loading={isLoading}
+          disabled={isLoading}
+        >
+          Create account
+        </CButton>
+      </motion.div>
       <p className="text-secondarycolor">
-        Sudah punya akun?
-        <Link to="/signin" className="underline">
-          Sign In disini
+        Already have an account?
+        <Link to="/signin" className="font-bold underline">
+          Sign In
         </Link>
       </p>
-      <Link to="/" className="hover:underline">
-        {'< Kembali'}
-      </Link>
     </form>
   );
 }
