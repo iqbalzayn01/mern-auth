@@ -1,5 +1,6 @@
 [English version](#build-a-fullstack-login--sign-up-with-mern-bcrypt--jwt)
-[Indonesia version](#build-a-fullstack-login--sign-up-with-mern-bcrypt--jwt)
+
+[Indonesia version](#membangun-aplikasi-fullstack-login--sign-up-dengan-mern-bcrypt-dan-jwt)
 
 ---
 
@@ -76,7 +77,9 @@ npm run dev
 
 ---
 
-# Membangun Aplikasi Fullstack Login & Sign Up dengan MERN, bcryot, dan JWT.
+---
+
+# Membangun Aplikasi Fullstack Login & Sign Up dengan MERN, bcrypt, dan JWT.
 
 Proyek ini adalah sistem otentikasi yang aman untuk aplikasi MERN (MongoDB, Express, React, Node.js) dengan menggunakan bcrypt untuk enkripsi password dan JWT (JSON Web Token) untuk mengelola sesi pengguna.
 
