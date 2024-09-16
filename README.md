@@ -4,6 +4,8 @@
 
 ---
 
+![Cover](./view.png)
+
 # Build a Fullstack Login & Sign Up with MERN, bcrypt, & JWT.
 
 This project provides a secure authentication system for your MERN application, utilizing bcrypt for password hashing and JWT for session management.
