@@ -9,7 +9,7 @@ const app = express();
 app.use((req, res, next) => {
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://mern-auth-client-zeta.vercel.app/'
+    'https://mern-auth-client-zeta.vercel.app'
   );
   res.setHeader(
     'Access-Control-Allow-Methods',
