@@ -38,11 +38,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.status(200).json({
-    message: `Welcome to API Electric`,
-  });
-});
+// app.get('/', (req, res) => {
+//   res.status(200).json({
+//     message: `Welcome to API MERN AUTH`,
+//   });
+// });
+
+app.get('/', (req, res) => res.send('Welcome to API MERN AUTH'));
 
 // App Router
 app.use(`${v1}/cms`, authCMSRouter);
