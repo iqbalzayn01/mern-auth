@@ -8,7 +8,11 @@ const {
 
 router.post('/sign-up', create);
 
-router.get('/users', authenticateUser, index);
+router.get(
+  '/users',
+  // authenticateUser,
+  index
+);
 
 router.get('/users/:id', authenticateUser, find);
 
