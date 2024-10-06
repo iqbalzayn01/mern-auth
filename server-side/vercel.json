@@ -1,7 +1,11 @@
 {
   "version": 2,
-  "builds": [{ "src": "./app.js", "use": "@vercel/node" }],
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 20
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
