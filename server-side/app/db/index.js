@@ -14,11 +14,7 @@ const mongoose = require('mongoose');
 const { urlDb } = require('../config');
 
 mongoose
-  .connect(urlDb, {
-    serverSelectionTimeoutMS: 5000,
-    connectTimeoutMS: 10000,
-    socketTimeoutMS: 45000,
-  })
+  .connect(urlDb)
   .then(() => console.log('MongoDB Connected'))
   .catch((error) => console.log('MongoDB Connection Error:', error));
 
