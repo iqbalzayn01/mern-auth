@@ -27,13 +27,13 @@ app.use((req, res, next) => {
 
 const v1 = '/api/v1';
 // Router
-const authCMSRouter = require('./app/api/v1/auth/router');
-const usersRouter = require('./app/api/v1/users/router');
-const userRefreshTokenRouter = require('./app/api/v1/userRefreshToken/router');
+const authCMSRouter = require('../app/api/v1/auth/router');
+const usersRouter = require('../app/api/v1/users/router');
+const userRefreshTokenRouter = require('../app/api/v1/userRefreshToken/router');
 
 // Middlewares
-const notFoundMiddleware = require('./app/middlewares/not-found');
-const handleErrorMiddleware = require('./app/middlewares/handler-error');
+const notFoundMiddleware = require('../app/middlewares/not-found');
+const handleErrorMiddleware = require('../app/middlewares/handler-error');
 
 app.use(logger('dev'));
 app.use(express.json());
